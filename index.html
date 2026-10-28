@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8f7">
+    <meta name="description"
+        content="Ponto Mix Personalizados em Itaituba: papelaria personalizada, presentes, festas, agendas e muito mais. Faça seu pedido pelo WhatsApp.">
+    <title>Ponto Mix Personalizados | Seu jeito, seu detalhe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ink: #29212c;
+            --muted: #766e78;
+            --pink: #e82069;
+            --blue: #25a9dc;
+            --mint: #11cdb0;
+            --yellow: #ffb63e;
+            --bg: #fffaf8;
+            --line: #eee5e7
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            font-family: 'DM Sans', sans-serif;
+            color: var(--ink)
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 24px
+        }
+
+        .announcement {
+            background: #2b2130;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .5px
+        }
+
+        .announcement span {
+            color: #66ead8
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: #fffefdf2;
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid #f3e8ea
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 78px;
+            gap: 20px
+        }
+
+        .logo {
+            font-family: Outfit;
+            font-weight: 900;
+            font-size: 24px;
+            letter-spacing: -1px
+        }
+
+        .logo b {
+            color: var(--pink)
+        }
+
+        .logo small {
+            display: block;
+            font: 700 9px 'DM Sans';
+            letter-spacing: 2px;
+            color: #81717b
+        }
+
+        .links {
+            display: flex;
+            gap: 30px;
+            font-size: 13px;
+            font-weight: 800
+        }
+
+        .links a:hover {
+            color: var(--pink)
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            align-items: center
+        }
+
+        .btn {
+            border: 0;
+            border-radius: 14px;
+            background: var(--pink);
+            color: white;
+            padding: 15px 22px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            transition: .2s
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(.96)
+        }
+
+        .btn.secondary {
+            background: white;
+            color: var(--ink);
+            border: 1px solid var(--line)
+        }
+
+        .cart-btn {
+            position: relative;
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            background: #fff;
+            padding: 12px 16px;
+            font-weight: 800
+        }
+
+        .cart-count {
+            background: var(--pink);
+            color: #fff;
+            border-radius: 99px;
+            padding: 2px 6px;
+            font-size: 11px
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(110deg, #fff0f4, #fff9f4 60%, #e9faff);
+            padding: 68px 0 78px
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: #ffdbe7;
+            border-radius: 50%;
+            filter: blur(15px);
+            right: -130px;
+            top: -150px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 70px;
+            align-items: center;
+            position: relative
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--pink)
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Outfit;
+            letter-spacing: -1.5px
+        }
+
+        h1 {
+            font-size: clamp(44px, 5.7vw, 78px);
+            line-height: 1.04;
+            margin: 18px 0
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--pink)
+        }
+
+        .hero p {
+            max-width: 500px;
+            color: #716672;
+            font-size: 17px;
+            line-height: 1.75
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 28px
+        }
+
+        .trust {
+            margin-top: 28px;
+            font-size: 12px;
+            color: #786b73;
+            font-weight: 700
+        }
+
+        .trust span {
+            margin-right: 17px
+        }
+
+        .hero-art {
+            background: #fff;
+            border: 12px solid #fff;
+            box-shadow: 0 25px 70px #9d52622a;
+            border-radius: 34px;
+            transform: rotate(3deg);
+            position: relative
+        }
+
+        .hero-art img {
+            width: 100%;
+            display: block;
+            border-radius: 23px
+        }
+
+        .float-tag {
+            position: absolute;
+            bottom: -20px;
+            left: -35px;
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px #0002;
+            font-weight: 800;
+            font-size: 13px;
+            transform: rotate(-3deg)
+        }
+
+        .float-tag strong {
+            color: var(--pink)
+        }
+
+        .section {
+            padding: 78px 0
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 15px;
+            margin-bottom: 30px
+        }
+
+        .section h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            margin: 10px 0
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin: 22px 0 26px
+        }
+
+        .chip {
+            background: #fff;
+            border: 1px solid #eee1e6;
+            border-radius: 99px;
+            padding: 12px 19px;
+            font-weight: 800;
+            color: #675964;
+            font-size: 13px
+        }
+
+        .chip.active,
+        .chip:hover {
+            background: #2b2130;
+            color: #fff;
+            border-color: #2b2130
+        }
+
+        .catalog-tools {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px
+        }
+
+        .search {
+            padding: 14px 17px;
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            min-width: 250px;
+            background: white;
+            outline: none
+        }
+
+        .search:focus {
+            border-color: var(--pink)
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
+        }
+
+        .product {
+            background: white;
+            border: 1px solid #f0e6e9;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: .2s
+        }
+
+        .product:hover {
+            box-shadow: 0 15px 35px #25152a13;
+            transform: translateY(-3px)
+        }
+
+        .photo {
+            height: 195px;
+            background: linear-gradient(135deg, #fff0f4, #e7f9fa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: auto
+        }
+
+        .photo .tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: white;
+            border-radius: 99px;
+            padding: 6px 11px;
+            font-size: 10px;
+            font-weight: 900
+        }
+
+        .product-body {
+            padding: 18px
+        }
+
+        .product-body small {
+            color: var(--pink);
+            font-weight: 900;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase
+        }
+
+        .product h3 {
+            font-size: 17px;
+            letter-spacing: -.4px;
+            line-height: 1.3;
+            min-height: 44px;
+            margin: 9px 0
+        }
+
+        .price {
+            font: 800 21px Outfit;
+            margin: 10px 0 15px
+        }
+
+        .price.consult {
+            font-size: 15px
+        }
+
+        .add {
+            width: 100%;
+            border: 1px solid #f6d2df;
+            color: var(--pink);
+            background: #fff1f5;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 900
+        }
+
+        .add:hover {
+            background: var(--pink);
+            color: white
+        }
+
+        .feature {
+            background: #2b2130;
+            color: white;
+            border-radius: 28px;
+            padding: 45px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 30px;
+            overflow: hidden
+        }
+
+        .feature h2 {
+            font-size: 40px;
+            margin: 10px 0
+        }
+
+        .feature p {
+            color: #d3c6d1;
+            line-height: 1.8
+        }
+
+        .feature .btn {
+            background: var(--mint);
+            color: #17352f
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .step {
+            background: #fff;
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: 20px
+        }
+
+        .step .number {
+            display: inline-grid;
+            place-items: center;
+            background: #ffe2ec;
+            color: var(--pink);
+            width: 42px;
+            height: 42px;
+            border-radius: 13px;
+            font-weight: 900
+        }
+
+        .step h3 {
+            font-size: 21px;
+            letter-spacing: -.5px
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7
+        }
+
+        .contact {
+            background: #f7edf0
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px
+        }
+
+        .contact-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 30px;
+            border: 1px solid var(--line)
+        }
+
+        .contact-card p {
+            line-height: 1.9;
+            color: var(--muted)
+        }
+
+        .hours {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+            font-size: 13px;
+            margin-top: 20px
+        }
+
+        .map-link {
+            background: #f5f0f1;
+            border: 1px solid #e5dce0;
+            border-radius: 18px;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800
+        }
+
+        footer {
+            background: #241c27;
+            color: #fff;
+            padding: 42px 0
+        }
+
+        footer .foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap
+        }
+
+        footer p {
+            color: #c4b7c4;
+            font-size: 12px
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: #1b111ab3;
+            z-index: 40;
+            display: none
+        }
+
+        .overlay.show {
+            display: block
+        }
+
+        .drawer {
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #fff;
+            width: min(100%, 460px);
+            z-index: 41;
+            transform: translateX(105%);
+            transition: .25s;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -20px 0 80px #0002
+        }
+
+        .drawer.show {
+            transform: none
+        }
+
+        .drawer-head {
+            padding: 24px;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .drawer-head h2 {
+            margin: 0
+        }
+
+        .close {
+            background: #f5edf0;
+            border: 0;
+            border-radius: 12px;
+            padding: 10px 14px;
+            font-weight: 900
+        }
+
+        .drawer-list {
+            padding: 22px;
+            overflow: auto;
+            flex: 1
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 12px;
+            border-bottom: 1px solid var(--line);
+            padding: 14px 0
+        }
+
+        .cart-item img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 12px
+        }
+
+        .cart-item .detail {
+            flex: 1
+        }
+
+        .cart-item h4 {
+            margin: 0 0 5px;
+            font-size: 14px
+        }
+
+        .cart-item small {
+            color: var(--muted)
+        }
+
+        .qty {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px
+        }
+
+        .qty button {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 7px;
+            padding: 3px 9px
+        }
+
+        .remove {
+            color: #d91c56;
+            border: 0;
+            background: none;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .drawer-bottom {
+            padding: 20px;
+            border-top: 1px solid var(--line)
+        }
+
+        .drawer-bottom label {
+            display: block;
+            font-size: 12px;
+            font-weight: 900;
+            margin: 8px 0
+        }
+
+        .drawer-bottom input,
+        .drawer-bottom textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            outline: none
+        }
+
+        .drawer-bottom .btn {
+            width: 100%
+        }
+
+        .note {
+            font-size: 11px;
+            color: var(--muted);
+            line-height: 1.6
+        }
+
+        .empty {
+            color: var(--muted);
+            text-align: center;
+            padding: 40px 10px
+        }
+
+        .mobile-menu {
+            display: none
+        }
+
+        .small-note {
+            font-size: 11px;
+            color: #8a7b86;
+            margin-top: 12px
+        }
+
+        #noResults {
+            display: none;
+            padding: 30px;
+            color: var(--muted)
+        }
+
+        @media(max-width:950px) {
+            .products {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .hero-grid {
+                gap: 35px
+            }
+
+            .links {
+                gap: 15px
+            }
+        }
+
+        @media(max-width:700px) {
+            .wrap {
+                padding: 0 18px
+            }
+
+            .nav {
+                height: 66px
+            }
+
+            .logo {
+                font-size: 20px
+            }
+
+            .links {
+                display: none
+            }
+
+            .mobile-menu {
+                display: inline-flex
+            }
+
+            .hero {
+                padding: 50px 0
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 38px
+            }
+
+            .hero-art {
+                max-width: 420px;
+                margin: auto;
+                transform: rotate(1deg)
+            }
+
+            .float-tag {
+                left: 0
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 11px
+            }
+
+            .photo {
+                height: 155px
+            }
+
+            .product-body {
+                padding: 13px
+            }
+
+            .product h3 {
+                font-size: 14px;
+                min-height: 55px
+            }
+
+            .price {
+                font-size: 17px
+            }
+
+            .price.consult {
+                font-size: 12px
+            }
+
+            .section {
+                padding: 54px 0
+            }
+
+            .section-head {
+                display: block
+            }
+
+            .catalog-tools {
+                align-items: stretch;
+                flex-direction: column
+            }
+
+            .search {
+                width: 100%
+            }
+
+            .feature,
+            .contact-grid,
+            .steps {
+                grid-template-columns: 1fr
+            }
+
+            .feature {
+                padding: 27px
+            }
+
+            .feature h2 {
+                font-size: 31px
+            }
+
+            .contact-grid {
+                gap: 16px
+            }
+
+            .cart-btn {
+                padding: 10px
+            }
+
+            .announcement {
+                font-size: 10px
+            }
+        }
+
+        @media(max-width:380px) {
+            .products {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .photo {
+                height: 130px
+            }
+
+            .product h3 {
+                font-size: 13px
+            }
+
+            .btn {
+                padding: 12px 15px
+            }
+        }
+    </style>
+    <style>
+        .store-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 10px 15px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 800;
+            margin-top: 17px;
+            background: #fff3f5;
+            color: #a43b57;
+            border: 1px solid #f3cad4
+        }
+
+        .store-status.is-open {
+            background: #e6f9ef;
+            color: #11663d;
+            border-color: #b6e9cc
+        }
+
+        .store-status .status-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: currentColor;
+            flex-shrink: 0
+        }
+
+        .contact-status {
+            margin: 12px 0 17px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="announcement">✨ PRESENTES, FESTAS E PAPELARIA <span>FEITOS DO SEU JEITO</span> ✨</div>
+    <header>
+        <div class="wrap nav"><a class="logo" href="#inicio">Ponto <b>Mix</b><small>PERSONALIZADOS</small></a>
+            <nav class="links"><a href="#inicio">Início</a><a href="#catalogo">Catálogo</a><a href="#como-funciona">Como
+                    pedir</a><a href="#contato">Contato</a></nav>
+            <div class="actions"><button class="cart-btn" onclick="openCart()">🛍️ Carrinho <span class="cart-count"
+                        id="cartCount">0</span></button></div>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="wrap hero-grid">
+                <div>
+                    <div class="eyebrow">🌈 Criatividade em cada detalhe</div>
+                    <h1>Seu momento, <em>do seu jeitinho.</em></h1>
+                    <p>Transformamos ideias em presentes, papelaria e personalizados cheios de carinho. Escolha seus
+                        favoritos e faça seu pedido em poucos cliques!</p>
+                    <div class="hero-buttons"><a class="btn" href="#catalogo">Explorar catálogo ↗</a><a
+                            class="btn secondary" href="https://wa.me/5593992304614" target="_blank"
+                            rel="noopener">Conversar no WhatsApp</a></div>
+                    <div id="storeStatusHero" class="store-status" role="status" aria-live="polite"><span
+                            class="status-dot"></span><span>Consultando horário...</span></div>
+                    <div class="trust"><span>♡ Feito com carinho</span><span>✦ Personalizado para você</span><span>📍
+                            Itaituba – PA</span></div>
+                </div>
+                <div class="hero-art"><img src="assets/banner-original.png"
+                        alt="Banner original Ponto Mix Personalizados">
+                    <div class="float-tag">✨ <strong>Pequenos detalhes,</strong> grandes emoções!</div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="catalogo">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Nossas criações</div>
+                        <h2>Encontre seu favorito 💖</h2>
+                        <p class="sub">De festas inesquecíveis a presentes únicos. Escolha os produtos e envie seu
+                            pedido pelo WhatsApp.</p>
+                    </div><span class="sub" id="resultCount"></span>
+                </div>
+                <div class="catalog-tools">
+                    <div class="categories" id="categories"></div><input class="search" id="search" type="search"
+                        placeholder="🔎 Buscar um produto..." aria-label="Buscar produto">
+                </div>
+                <div class="products" id="products"></div>
+                <div id="noResults">Nenhum produto encontrado. Tente outra busca.</div>
+                <p class="small-note">* Fotos dos produtos recortadas das capturas do catálogo; a resolução original é
+                    limitada. Valores sujeitos à confirmação da loja; personalizações podem alterar o preço.</p>
+            </div>
+        </section>
+        <section class="wrap">
+            <div class="feature">
+                <div>
+                    <div class="eyebrow" style="color:#77ead8">Seu pedido, sem complicação</div>
+                    <h2>Escolheu? A gente personaliza! ✨</h2>
+                    <p>Monte seu carrinho, conte como quer seus personalizados e envie tudo de uma vez para nosso
+                        WhatsApp. Simples, rápido e direto.</p><button class="btn" onclick="openCart()">🛍️ Ver meu
+                        carrinho</button>
+                </div>
+                <div style="font-size:clamp(85px,14vw,190px);text-align:center">🎁💌</div>
+            </div>
+        </section>
+        <section class="section" id="como-funciona">
+            <div class="wrap">
+                <div class="eyebrow">É super fácil</div>
+                <h2>Como fazer seu pedido</h2>
+                <div class="steps">
+                    <div class="step"><span class="number">01</span>
+                        <h3>Escolha seus produtos</h3>
+                        <p>Explore o catálogo e adicione seus favoritos ao carrinho.</p>
+                    </div>
+                    <div class="step"><span class="number">02</span>
+                        <h3>Conte os detalhes</h3>
+                        <p>Informe seu nome e como deseja personalizar os produtos.</p>
+                    </div>
+                    <div class="step"><span class="number">03</span>
+                        <h3>Envie pelo WhatsApp</h3>
+                        <p>Uma mensagem com seu pedido será preparada automaticamente. Basta enviá-la para a loja!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section contact" id="contato">
+            <div class="wrap">
+                <div class="eyebrow">Estamos por aqui</div>
+                <h2>Venha conhecer a Ponto Mix 📍</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>📍 Onde estamos</h3>
+                        <p>Tv. Segunda, km 5 – Jardim Aeroporto<br>Itaituba – PA, CEP 68182-301</p><a class="map-link"
+                            href="https://www.google.com/maps/search/?api=1&query=-4.2444635%2C-56.0114641"
+                            target="_blank" rel="noopener">🗺️ Abrir localização no Google Maps ↗</a>
+                        <p><strong>📱 WhatsApp:</strong> (93) 99230-4614</p>
+                        <p><strong>📸 Instagram:</strong> <a href="https://www.instagram.com/pontomix_personalizados/"
+                                target="_blank" rel="noopener noreferrer"
+                                style="color:var(--pink);font-weight:800;text-decoration:underline">@pontomix_personalizados
+                                ↗</a></p><a class="btn" href="https://wa.me/5593992304614" target="_blank"
+                            rel="noopener">Falar com a loja ↗</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>🕒 Horários de atendimento</h3>
+                        <div id="storeStatusContact" class="store-status contact-status" role="status"
+                            aria-live="polite"><span class="status-dot"></span><span>Consultando horário...</span></div>
+                        <div class="hours"><span>Segunda a sexta</span><strong>08h–12h /
+                                14h–18h</strong><span>Sábado</span><strong>08h–12h</strong><span>Domingo</span><strong>Fechado</strong>
+                        </div>
+                        <p class="small-note">Horários informados nas imagens recebidas. Confirme antes da publicação,
+                            pois o Google Maps exibe um horário diferente.</p>
+                        <h3>💗 Feito por empreendedoras</h3>
+                        <p>Personalizados, cadernetas de saúde, agendas, adesivos, kits festa e muitas outras ideias
+                            feitas especialmente para você.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap foot">
+            <div>
+                <div class="logo">Ponto <b>Mix</b><small>PERSONALIZADOS</small></div>
+                <p>Um toque de carinho em cada criação.</p>
+            </div>
+            <div>
+                <p>Itaituba – Pará • (93) 99230-4614</p>
+                <p><a href="https://www.instagram.com/pontomix_personalizados/" target="_blank"
+                        rel="noopener noreferrer" style="color:#fff;text-decoration:underline">📸 Instagram
+                        @pontomix_personalizados ↗</a></p>
+                <p>© <span id="year"></span> Ponto Mix Personalizados • Demonstração de site</p>
+            </div>
+        </div>
+    </footer>
+    <div class="overlay" id="overlay" onclick="closeCart()"></div>
+    <aside class="drawer" id="drawer" aria-label="Carrinho de pedidos">
+        <div class="drawer-head">
+            <h2>🛍️ Meu pedido</h2><button class="close" onclick="closeCart()" aria-label="Fechar carrinho">✕</button>
+        </div>
+        <div class="drawer-list" id="cartItems"></div>
+        <div class="drawer-bottom"><label for="customer">Seu nome (opcional)</label><input id="customer"
+                placeholder="Como podemos te chamar?" maxlength="90"><label for="observations">Detalhes da
+                personalização (opcional)</label><textarea id="observations" rows="3" maxlength="1200"
+                placeholder="Ex.: cores, nomes, tema, data desejada..."></textarea>
+            <p id="subtotal" style="font-weight:900"></p><button class="btn" id="sendBtn" onclick="sendOrder()">💬
+                Enviar pedido pelo WhatsApp</button>
+            <p class="note">Ao clicar, o WhatsApp será aberto com a mensagem pronta. Você precisará confirmar o envio.
+                Os valores finais serão confirmados pela loja.</p>
+        </div>
+    </aside>
+    <script>
+        const PHONE = '5593992304614'; const products = [
+            { id: 'cesta', name: 'Cestas para presentear', category: 'Presentes', price: null, image: 'cesta' },
+            { id: 'caixa-sortida', name: 'Caixa personalizada sortida', category: 'Presentes', price: 150, image: 'caixa-sortida' },
+            { id: 'festa-caixa', name: 'Festa na Caixa Personalizada', category: 'Presentes', price: 180, image: 'festa-caixa' },
+            { id: 'festa-caneca', name: 'Festa na Caneca', category: 'Presentes', price: 75, image: 'festa-caneca' },
+            { id: 'buque-chocolate', name: 'Buquê de chocolate', category: 'Pro Mozão', price: 80, image: 'buque-chocolate' },
+            { id: 'carimbo', name: 'Carimbos personalizados', category: 'Seu Empreendimento', price: 60, image: 'carimbo' },
+            { id: 'lousa', name: 'Lembrancinha lousa personalizada', category: 'Festa', price: 12, image: 'lousa' },
+            { id: 'sacola', name: 'Sacola personalizada', category: 'Seu Empreendimento', price: 15, image: 'sacola' },
+            { id: 'copo-long', name: 'Copo Long Drink personalizado', category: 'Presentes', price: 10, image: 'copo-long' },
+            { id: 'kit-caderneta-caneca', name: 'Kit caderneta e caneca personalizada', category: 'Presentes', price: 120, image: 'kit-caderneta-caneca' },
+            { id: 'buque', name: 'Buquê personalizado', category: 'Pro Mozão', price: 50, image: 'buque' },
+            { id: 'kit-livrinho', name: 'Kit 30 lembrancinhas livrinho', category: 'Festa', price: 200, image: 'kit-livrinho' },
+            { id: 'agendas', name: 'Agendas personalizadas', category: 'Escolar', price: 120, image: 'agendas' },
+            { id: 'cofrinho', name: 'Cofrinho personalizado', category: 'Presentes', price: 8, image: 'cofrinho' },
+            { id: 'caderninho', name: 'Caderninhos personalizados', category: 'Seu Empreendimento', price: 20, image: 'caderninho' },
+            { id: 'canecas-polimero', name: 'Canecas de polímero personalizadas', category: 'Presentes', price: 45, image: 'canecas-polimero' },
+            { id: 'caderneta-leao-70', name: 'Caderneta de anotações (Leão) - modelo 1', category: 'Escolar', price: 70, image: 'caderneta-leao-70' },
+            { id: 'caderneta-leao-80', name: 'Caderneta de anotações (Leão) - modelo 2', category: 'Escolar', price: 80, image: 'caderneta-leao-80' },
+            { id: 'caderneta-leao-90', name: 'Caderneta de anotações (Leão) - modelo 3', category: 'Escolar', price: 90, image: 'caderneta-leao-90' },
+            { id: 'desenho', name: 'Caderno de desenho personalizado', category: 'Escolar', price: 60, image: 'desenho' },
+            { id: 'brochura', name: 'Caderno de brochura personalizado', category: 'Escolar', price: 50, image: 'brochura' },
+            { id: 'caneca-caixa-1', name: 'Caneca com caixa personalizada', category: 'Presentes', price: 70, image: 'caneca-caixa-1' },
+            { id: 'caneca-porcelana', name: 'Caneca personalizada de porcelana', category: 'Presentes', price: 60, image: 'caneca-porcelana' },
+            { id: 'caneca-caixa-2', name: 'Caneca e caixa personalizada', category: 'Presentes', price: 70, image: 'caneca-caixa-2' },
+            { id: 'caneca', name: 'Caneca de plástico personalizada', category: 'Presentes', price: 45, image: 'caneca' },
+            { id: 'agenda', name: 'Agenda escolar', category: 'Escolar', price: 100, image: 'agenda' },
+            { id: 'lembrancinha-polaroid', name: 'Lembrancinha Polaroid', category: 'Festa', price: 25, image: 'lembrancinha-polaroid' },
+            { id: 'quebra-cabeca', name: 'Quebra-cabeça personalizado', category: 'Presentes', price: 50, image: 'quebra-cabeca' },
+            { id: 'envelope', name: 'Lembrancinha envelope personalizada', category: 'Festa', price: 12, image: 'envelope' },
+            { id: 'caderneta-saude', name: 'Caderneta de saúde personalizada', category: 'Escolar', price: 80, image: 'caderneta-saude' },
+            { id: 'duas-canecas', name: 'Duas canecas com caixa personalizada', category: 'Presentes', price: 180, image: 'duas-canecas' },
+            { id: 'sacolas-papel', name: 'Sacolas de papel personalizadas', category: 'Seu Empreendimento', price: 15, image: 'sacolas-papel' },
+            { id: 'livro-colorir', name: 'Livro de colorir Bobbie Goods', category: 'Escolar', price: 25, image: 'livro-colorir' },
+            { id: 'caixa-cartonada', name: 'Caixa cartonada P', category: 'Presentes', price: 80, image: 'caixa-cartonada' },
+            { id: 'chaveiro', name: 'Chaveiro de acrílico + pompom', category: 'Presentes', price: 25, image: 'chaveiro' },
+            { id: 'etiquetas', name: 'Etiquetas escolares', category: 'Escolar', price: null, image: 'etiquetas' },
+            { id: 'adesivos-baloes', name: 'Adesivos para balões', category: 'Festa', price: 20, image: 'adesivos-baloes' },
+            { id: 'cracha', name: 'Crachás', category: 'Seu Empreendimento', price: 30, image: 'cracha' },
+            { id: 'topo-luxo-40', name: 'Topo de bolo luxo', category: 'Festa', price: 40, image: 'topo-luxo-40' },
+            { id: 'azulejos', name: 'Azulejos personalizados', category: 'Presentes', price: 50, image: 'azulejos' },
+            { id: 'tubetes', name: 'Tags para tubetes', category: 'Festa', price: null, image: 'tubetes' },
+            { id: 'garrafa', name: 'Garrafa infantil personalizada', category: 'Escolar', price: 70, image: 'garrafa' },
+            { id: 'botton-58', name: 'Botton 5,8', category: 'Seu Empreendimento', price: 15, image: 'botton-58' },
+            { id: 'abas-biblia', name: 'Abas para bíblias', category: 'Presentes', price: 30, image: 'abas-biblia' },
+            { id: 'bottons', name: 'Bottons de animes, doramas e outros', category: 'Seu Empreendimento', price: 15, image: 'bottons' },
+            { id: 'flor-3d', name: 'Flor 3D com detalhes dourados', category: 'Presentes', price: 15, image: 'flor-3d' },
+            { id: 'adesivo-transparente', name: 'Adesivo transparente', category: 'Seu Empreendimento', price: null, image: 'adesivo-transparente' },
+            { id: 'kit-copo', name: 'Kit copo Long Drink e caixinhas', category: 'Presentes', price: null, image: 'kit-copo' },
+            { id: 'cartoes-visita', name: 'Kit 100 cartões de visita', category: 'Seu Empreendimento', price: 100, image: 'cartoes-visita' },
+            { id: 'topo-luxo-20', name: 'Topo de bolo luxo (modelo 2)', category: 'Festa', price: 20, image: 'topo-luxo-20' },
+            { id: 'tags-produtos', name: 'Kit 100 tags para produtos', category: 'Seu Empreendimento', price: 100, image: 'tags-produtos' },
+            { id: 'topo', name: 'Topo de bolo', category: 'Festa', price: null, image: 'topo' },
+            { id: 'marcador', name: 'Marcador de páginas', category: 'Seu Empreendimento', price: null, image: 'marcador' },
+            { id: 'polaroid', name: 'Kit 6 fotos Polaroid', category: 'Pro Mozão', price: 15, image: 'polaroid' }];
+        const money = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); let category = 'Todos'; let cart = {}; try { cart = JSON.parse(localStorage.getItem('pontomix-cart') || '{}') } catch { }; function save() { localStorage.setItem('pontomix-cart', JSON.stringify(cart)); updateCount() }; function updateCount() { document.getElementById('cartCount').textContent = Object.values(cart).reduce((a, b) => a + b, 0) } function renderCategories() { const cats = ['Todos', 'Festa', 'Seu Empreendimento', 'Presentes', 'Pro Mozão', 'Escolar']; document.getElementById('categories').innerHTML = cats.map(c => `<button class="chip ${category === c ? 'active' : ''}" data-category="${c}">${c}</button>`).join(''); document.querySelectorAll('[data-category]').forEach(b => b.onclick = () => { category = b.dataset.category; renderCategories(); renderProducts() }) } function renderProducts() { const q = document.getElementById('search').value.toLocaleLowerCase('pt-BR').trim(); const filtered = products.filter(p => (category === 'Todos' || p.category === category || (p.also || []).includes(category)) && p.name.toLocaleLowerCase('pt-BR').includes(q)); document.getElementById('products').innerHTML = filtered.map(p => `<article class="product"><div class="photo"><img src="assets/${p.image}.webp" alt="${p.name}" loading="lazy"><span class="tag">PERSONALIZADO ✨</span></div><div class="product-body"><small>${p.category}</small><h3>${p.name}</h3><div class="price ${p.price === null ? 'consult' : ''}">${p.price === null ? 'Consultar valor' : money(p.price)}</div><button class="add" data-add="${p.id}">＋ Adicionar ao pedido</button></div></article>`).join(''); document.getElementById('resultCount').textContent = filtered.length + ' produtos'; document.getElementById('noResults').style.display = filtered.length ? 'none' : 'block'; document.querySelectorAll('[data-add]').forEach(b => b.onclick = () => addToCart(b.dataset.add)) } function addToCart(id) { cart[id] = (cart[id] || 0) + 1; save(); openCart() } function changeQty(id, delta) { cart[id] = (cart[id] || 0) + delta; if (cart[id] <= 0) delete cart[id]; save(); renderCart() } function openCart() { renderCart(); document.getElementById('overlay').classList.add('show'); document.getElementById('drawer').classList.add('show'); document.body.style.overflow = 'hidden' } function closeCart() { document.getElementById('overlay').classList.remove('show'); document.getElementById('drawer').classList.remove('show'); document.body.style.overflow = '' } function renderCart() { const list = Object.entries(cart).filter(([id, q]) => q > 0 && products.some(p => p.id === id)); document.getElementById('cartItems').innerHTML = list.length ? list.map(([id, q]) => { const p = products.find(x => x.id === id); return `<div class="cart-item"><img src="assets/${p.image}.webp" alt=""><div class="detail"><h4>${p.name}</h4><small>${p.price === null ? 'Valor sob consulta' : money(p.price) + ' cada'}</small><div class="qty"><button data-change="${id}" data-delta="-1">−</button><strong>${q}</strong><button data-change="${id}" data-delta="1">＋</button><button class="remove" data-remove="${id}">Remover</button></div></div></div>` }).join('') : '<div class="empty">Seu carrinho está vazio 💌<br>Adicione um produto para começar.</div>'; document.querySelectorAll('[data-change]').forEach(b => b.onclick = () => changeQty(b.dataset.change, Number(b.dataset.delta))); document.querySelectorAll('[data-remove]').forEach(b => b.onclick = () => { delete cart[b.dataset.remove]; save(); renderCart() }); const known = list.reduce((s, [id, q]) => s + (products.find(p => p.id === id).price || 0) * q, 0); const unknown = list.some(([id]) => products.find(p => p.id === id).price === null); document.getElementById('subtotal').textContent = list.length ? `Subtotal de itens com preço: ${money(known)}${unknown ? ' + itens sob consulta' : ''}` : ''; document.getElementById('sendBtn').disabled = !list.length; document.getElementById('sendBtn').style.opacity = list.length ? '1' : '.5' } function sendOrder() { const list = Object.entries(cart).filter(([id, q]) => q > 0 && products.some(p => p.id === id)); if (!list.length) return; const name = document.getElementById('customer').value.trim(), obs = document.getElementById('observations').value.trim(); let lines = ['Olá, Ponto Mix! 💖', 'Gostaria de solicitar um orçamento para os seguintes personalizados:', '']; list.forEach(([id, q], i) => { const p = products.find(x => x.id === id); lines.push(`${i + 1}. ${p.name}`); lines.push(`Quantidade: ${q}`); lines.push(`Preço de referência: ${p.price === null ? 'A consultar' : money(p.price) + ' por unidade'}`); if (p.unit) lines.push(`Observação do catálogo: ${p.unit}`); lines.push('') }); if (name) lines.push(`Meu nome: ${name}`); if (obs) lines.push(`Personalização/observações: ${obs}`); lines.push('Podem confirmar os valores finais, disponibilidade e prazo de produção? Obrigado(a)!'); window.open('https://wa.me/' + PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener,noreferrer') } document.getElementById('search').addEventListener('input', renderProducts); document.getElementById('year').textContent = new Date().getFullYear(); renderCategories(); renderProducts(); updateCount(); document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart() });
+    </script>
+    <script>
+        // Horário local de Itaituba (America/Santarem, UTC-3); nunca usar fuso do visitante.
+        function updateStoreStatus() {
+            const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Santarem', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+            const get = t => parts.find(p => p.type === t)?.value;
+            const day = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[get('weekday')];
+            const minutes = Number(get('hour')) * 60 + Number(get('minute'));
+            const weekday = day >= 1 && day <= 5;
+            const open = weekday ? ((minutes >= 480 && minutes < 720) || (minutes >= 840 && minutes < 1080)) : (day === 6 && minutes >= 480 && minutes < 720);
+            let next = '';
+            if (open) { next = weekday && minutes < 720 ? 'Fecha às 12h' : 'Fecha às ' + (day === 6 ? '12h' : '18h'); }
+            else if (weekday) { next = minutes < 480 ? 'Abre às 08h' : minutes < 840 ? 'Reabre às 14h' : day === 5 ? 'Abre sábado às 08h' : 'Abre amanhã às 08h'; }
+            else if (day === 6) { next = minutes < 480 ? 'Abre às 08h' : 'Abre segunda às 08h'; }
+            else { next = 'Abre segunda às 08h'; }
+            for (const id of ['storeStatusHero', 'storeStatusContact']) {
+                const el = document.getElementById(id); if (!el) continue;
+                el.classList.toggle('is-open', open);
+                el.querySelector('span:last-child').textContent = (open ? 'Aberto agora' : 'Fechado agora') + ' · ' + next;
+            }
+        }
+        updateStoreStatus(); setInterval(updateStoreStatus, 30000);
+    </script>
+</body>
+
+</html>

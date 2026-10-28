@@ -1,0 +1,5 @@
+PONTO MIX PERSONALIZADOS — CATÁLOGO AMPLIADO
+Abra index.html no navegador.
+Fotos recortadas das capturas enviadas pelo usuário. Aumentamos dimensões e ajustamos nitidez, mas não é possível recuperar detalhes ausentes nas miniaturas originais.
+Para qualidade realmente alta, substitua os arquivos .webp da pasta assets por fotos originais com os mesmos nomes.
+Os preços foram transcritos das capturas e precisam ser confirmados antes da publicação.
